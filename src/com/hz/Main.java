@@ -2,6 +2,7 @@ package com.hz;
 
 import java.awt.geom.NoninvertibleTransformException;
 import java.io.IOException;
+import java.util.Arrays;
 
 public class Main {
 
@@ -20,8 +21,10 @@ public class Main {
         // ask question to user
         writer.write(q1);
 
+        String[] yesValues = {"true", "yes", "oh yeah", "great", "sure", "love to", "of course", "always", "never done otherwise"};
+
         // read response
-        Boolean ans1 = reader.readLine().equals("Yep");
+        Boolean ans1 = Arrays.asList(yesValues).contains(reader.readLine());
 
         //TODO
         // the reader should accept the following values as true:
